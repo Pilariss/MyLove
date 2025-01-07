@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, pink, white);
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  #love-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  .envelope {
+    width: 100px;
+    height: 70px;
+    background: #fff;
+    border: 2px solid #000;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .envelope::before, .envelope::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 50px 35px 50px;
+    top: -35px;
+    left: 0;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  .envelope::after {
+    border-color: transparent transparent #000 transparent;
+    z-index: 1;
+    top: -37px;
+  }
+  
+  .envelope.open {
+    background: transparent;
+  }
+  
+  .envelope.open::before, .envelope.open::after {
+    display: none;
+  }  
